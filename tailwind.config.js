@@ -2,8 +2,13 @@
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class",
+
   theme: {
+    colors: {
+      primary: "#383F5B",
+      white: "#fff",
+      black: "#000",
+    },
     extend: {
       fontFamily: {
         "sf-pro-display": ["SF Pro Display", "Arial", "sans-serif"],
