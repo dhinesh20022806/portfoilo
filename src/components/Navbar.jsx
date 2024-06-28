@@ -1,18 +1,14 @@
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
-
-  const handleToggle = () => {
+  const NavToggle = () => {
     setOpen((prev) => !prev);
   };
-  const navClassBtn = `  before:rounded cursor-pointer  before:content-[''] text-white before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0  before:border-b-4 before:border-white before:scale-0 before:transition-transform before:duration-300 before:ease-in-out before:origin-bottom-left before:hover:scale-100 relative uppercase pb-1 tracking-widest`;
-
+  const navClassBtn = ` before:rounded cursor-pointer  before:content-[''] text-primary before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0  before:border-b-4 before:border-primary before:scale-0 before:transition-transform before:duration-300 before:ease-in-out before:origin-bottom-left before:hover:scale-100 relative uppercase pb-1 tracking-widest`;
+  const toggleMainBtn = `lg:hidden flex flex-col items-center gap-5 justify-center   transition-transform origin-top  duration-300 ease-linear`;
   return (
-    <nav
-      className={` uppercase  bg-primary p-10 text-white text-[1.6rem]  top-0 `}
-    >
-      <div className="grid grid-cols-2 items-center  ">
+    <nav className="text-[1.6rem] text-white">
+      <div className=" flex justify-between px-10 py-5  bg-primary items-center ">
         <div className=" animate-flicker ">
           <span className="absolute mx-auto py-4 flex  border w-fit bg-gradient-to-r blur-xl from-white  to-white bg-clip-text text-6xl box-content font-extrabold text-transparent text-center select-none">
             Dhinesh
@@ -21,38 +17,26 @@ const Navbar = () => {
             Dhinesh
           </h1>
         </div>
+        <div>
+          <ul className="lg:flex gap-5 hidden  ">
+            <li>
+              <a className={navClassBtn}>home</a>
+            </li>
+            <li>
+              <a className={navClassBtn}>About</a>
+            </li>
+            <li>
+              <a className={navClassBtn}>Skill</a>
+            </li>
+            <li>
+              <a className={navClassBtn}>Project</a>
+            </li>
+            <li>
+              <a className={navClassBtn}>Contact</a>
+            </li>
+          </ul>
 
-        <ul className="lg:grid lg:grid-cols-5 lg:gap-1 font-semibold  hidden">
-          <li>
-            <a href="#home" className={navClassBtn}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className={navClassBtn}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#skill" className={navClassBtn}>
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#project" className={navClassBtn}>
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contacts" className={navClassBtn}>
-              contacts
-            </a>
-          </li>
-        </ul>
-
-        {/* mobile */}
-        <div className="lg:hidden col-start-5 col-end-6   ">
-          <button onClick={handleToggle}>
+          <button onClick={NavToggle} className="lg:hidden">
             {!isOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +44,7 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="size-16"
+                className="size-16 "
               >
                 <path
                   strokeLinecap="round"
@@ -73,9 +57,9 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={1.5}
+                strokeWidth={"1.5"}
                 stroke="currentColor"
-                className="size-16"
+                className="size-16  "
               >
                 <path
                   strokeLinecap="round"
@@ -86,44 +70,28 @@ const Navbar = () => {
             )}
           </button>
         </div>
-
-        <ul
-          className={`${
-            isOpen ? "scale-100" : "scale-0 hidden"
-          }   grid text-[2rem] text-center gap-5 col-span-3 justify-center lg:hidden  `}
-        >
-          <li>
-            <a href="#home" className={navClassBtn}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className={navClassBtn}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#skill" className={navClassBtn}>
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#project" className={navClassBtn}>
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#whyhireme" className={navClassBtn}>
-              Why hire me
-            </a>
-          </li>
-          <li>
-            <a href="#contacts" className={navClassBtn}>
-              contacts
-            </a>
-          </li>
-        </ul>
       </div>
+      <ul
+        className={`${toggleMainBtn} my-10 font-semibold font-sf-pro-text  ${
+          isOpen ? "scale-100" : "scale-0 hidden "
+        }`}
+      >
+        <li>
+          <a className={navClassBtn}>home</a>
+        </li>
+        <li>
+          <a className={navClassBtn}>About</a>
+        </li>
+        <li>
+          <a className={navClassBtn}>Skill</a>
+        </li>
+        <li>
+          <a className={navClassBtn}>Project</a>
+        </li>
+        <li>
+          <a className={navClassBtn}>Contact</a>
+        </li>
+      </ul>
     </nav>
   );
 };
