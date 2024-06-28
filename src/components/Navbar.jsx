@@ -6,34 +6,47 @@ const Navbar = () => {
   const handleToggle = () => {
     setOpen((prev) => !prev);
   };
+  const navClassBtn = `  before:rounded cursor-pointer  before:content-[''] text-white before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0  before:border-b-4 before:border-white before:scale-0 before:transition-transform before:duration-300 before:ease-in-out before:origin-bottom-left before:hover:scale-100 relative uppercase pb-1 tracking-widest`;
 
   return (
     <nav
       className={` uppercase  bg-primary p-10 text-white text-[1.6rem]  top-0 `}
     >
       <div className="grid grid-cols-2 items-center  ">
-        <p className="uppercase text-[2.4rem] font-sf-pro-display animate-flicker  shadow-[0px 0px 105px 45px rgba(180,214,212,0.9)] inline-block ">
-          dhinesh
-        </p>
+        <div className=" animate-flicker ">
+          <span className="absolute mx-auto py-4 flex  border w-fit bg-gradient-to-r blur-xl from-white  to-white bg-clip-text text-6xl box-content font-extrabold text-transparent text-center select-none">
+            Dhinesh
+          </span>
+          <h1 className="relative top-0 w-fit h-auto py-4 justify-center flex bg-gradient-to-r items-center from-white to-white  bg-clip-text text-6xl font-extrabold text-transparent text-center select-auto">
+            Dhinesh
+          </h1>
+        </div>
 
-        <ul className="lg:grid lg:grid-cols-6   lg:gap-1 hidden">
+        <ul className="lg:grid lg:grid-cols-5 lg:gap-1 font-semibold  hidden">
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" className={navClassBtn}>
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about" className={navClassBtn}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#skill">Skills</a>
+            <a href="#skill" className={navClassBtn}>
+              Skills
+            </a>
           </li>
           <li>
-            <a href="#project">Projects</a>
+            <a href="#project" className={navClassBtn}>
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#whyhireme">Why hire me</a>
-          </li>
-          <li>
-            <a href="#contacts">contacts</a>
+            <a href="#contacts" className={navClassBtn}>
+              contacts
+            </a>
           </li>
         </ul>
 
@@ -77,25 +90,37 @@ const Navbar = () => {
         <ul
           className={`${
             isOpen ? "scale-100" : "scale-0 hidden"
-          }   grid text-[2rem] text-center transition transform  col-span-3 justify-center lg:hidden  `}
+          }   grid text-[2rem] text-center gap-5 col-span-3 justify-center lg:hidden  `}
         >
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" className={navClassBtn}>
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about" className={navClassBtn}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#skill">Skills</a>
+            <a href="#skill" className={navClassBtn}>
+              Skills
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#project" className={navClassBtn}>
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#whyhireme">Why hire me</a>
+            <a href="#whyhireme" className={navClassBtn}>
+              Why hire me
+            </a>
           </li>
           <li>
-            <a href="#contacts">contacts</a>
+            <a href="#contacts" className={navClassBtn}>
+              contacts
+            </a>
           </li>
         </ul>
       </div>

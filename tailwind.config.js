@@ -5,14 +5,22 @@ export default {
 
   theme: {
     colors: {
-      primary: "#383F5B",
+      primary: "#002244",
       white: "#fff",
       black: "#000",
     },
     extend: {
       fontFamily: {
-        "sf-pro-display": ["SF Pro Display", "Arial", "sans-serif"],
-        "sf-pro-text": ["SF Pro Text", "Arial", "sans-serif"],
+        "sf-pro-display": [
+          "SF Pro Display",
+          "Arial",
+          "sans-serif",
+        ],
+        "sf-pro-text": [
+          "SF Pro Text",
+          "Arial",
+          "sans-serif",
+        ],
       },
 
       animation: {

@@ -14,7 +14,7 @@ const Home = () => {
             Full stack web developer
           </span>
         </h1>
-        <button className="rounded-full  uppercase text-[1.6rem]  px-10 py-6 bg-primary text-white">
+        <button className="  uppercase text-[1.6rem]  px-10 py-6 bg-primary text-white">
           Download
           <span className="ml-10">
             <svg
