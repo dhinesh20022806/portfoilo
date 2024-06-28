@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <header
       id="home"
-      className="grid gird-cols-1 md:grid-cols-2 place-items-center px-10 mt-96"
+      className="grid gird-cols-1 md:grid-cols-2 place-items-center px-10 lg:mt-96"
     >
       <div className="text-[3.6rem] text-center sm:text-left border-black uppercase ">
         <h1>

@@ -4,7 +4,7 @@ const Navbar = () => {
   const NavToggle = () => {
     setOpen((prev) => !prev);
   };
-  const navClassBtn = ` before:rounded cursor-pointer  before:content-[''] text-primary before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0  before:border-b-4 before:border-primary before:scale-0 before:transition-transform before:duration-300 before:ease-in-out before:origin-bottom-left before:hover:scale-100 relative uppercase pb-1 tracking-widest`;
+  const navClassBtn = ` before:rounded lg:text-white cursor-pointer  before:content-[''] text-primary before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0  before:border-b-4 before:border-primary before:scale-0 before:transition-transform before:duration-300 before:ease-in-out before:origin-bottom-left before:hover:scale-100 relative uppercase pb-1 tracking-widest`;
   const toggleMainBtn = `lg:hidden flex flex-col items-center gap-5 justify-center   transition-transform origin-top  duration-300 ease-linear`;
   return (
     <nav className="text-[1.6rem] text-white">
@@ -73,7 +73,7 @@ const Navbar = () => {
       </div>
       <ul
         className={`${toggleMainBtn} my-10 font-semibold font-sf-pro-text  ${
-          isOpen ? "scale-100" : "scale-0 hidden "
+          isOpen ? "scale-100" : "scale-0  "
         }`}
       >
         <li>
