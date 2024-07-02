@@ -1,27 +1,23 @@
-import {
-  Navbar,
-  Home,
-  About,
-  Skills,
-  Projects,
-  Content,
-  Footer,
-} from "./components";
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
-    <>
-      {/* navbar  */}
+    <div>
+      {/* Navbar */}
       <Navbar />
-
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Content />
+      {/* {hero sections} */}
+      <Hero />
+      {/* about me  */}
+      {/* skill sections */}
+      {/* projects */}
+      {/* contact */}
+      {/* footer */}
       <Footer />
-    </>
+    </div>
   );
-}
+};
 
 export default App;
