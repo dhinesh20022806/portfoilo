@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
       </div>
       <ul
-        className={`${toggleMainBtn} my-10 font-semibold font-sf-pro-text  ${
+        className={`${toggleMainBtn} my-10 font-semibold font-sf-pro-text absolute top-[5%] h-[100vh] bg-white w-full z-[1]  ${
           isOpen ? "scale-100" : "scale-0  "
         }`}
       >

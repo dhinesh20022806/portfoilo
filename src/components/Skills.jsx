@@ -1,20 +1,28 @@
 import React from "react";
-import Skill from "./sub-components/Skill";
-
+import SkillCard from "../skill-components/SkillCard";
+import frontEnd from "../data/front-end";
+import backend from "../data/backend";
+import others from "../data/others";
+import code from "../assets/images/code.png";
 const Skills = () => {
   return (
-    <section>
+    <section className={`bg-[url(${code})]`}>
       <h1 className="text-center">Skills</h1>
-      <div className="flex justify-around w-4/5 mx-auto gap-10 flex-col md:flex-row min-h-[900px] max-h-fit">
-        <div className="flex-[0.5] border-primary border-4 ">
-          <Skill />
-        </div>
-        <div className="flex-[0.5] border-black border-4">
-          back end skill
-        </div>
-        <div className="flex-[0.5] border-primary border-4">
-          Others skill
-        </div>
+      <div className="flex justify-around w-4/5 mx-auto gap-10 flex-col md:flex-row ">
+        {/* <img src={code} alt="code" /> */}
+        {/* <SkillCard
+          skillArray={frontEnd}
+          skillName={"frontend"}
+        />
+
+        <SkillCard
+          skillArray={backend}
+          skillName={"backend"}
+        />
+        <SkillCard
+          skillArray={others}
+          skillName={"others & tools"}
+        /> */}
       </div>
     </section>
   );
