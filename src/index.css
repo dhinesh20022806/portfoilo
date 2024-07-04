@@ -4,25 +4,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scrollbar-width: none;
 }
 :root {
-  font-size: 62.5%;
+ 
   --blue-color: #0071e3;
   --gray-color: #f5f5f7;
   --gray-text-color: #86868b;
   --white-color: #fff;
   --black-color: #000;
 }
+
+html{
+   font-size: 62.5%;
+}
 body {
+  font-size:1.6rem;
   background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
   font-family: "SF Pro Display";
   src: url("./assets/fonts/SFPRODISPLAYREGULAR.OTF")
     format("opentype");
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -30,4 +36,48 @@ body {
   font-family: "SF Pro Text";
   src: url("./assets//fonts/SF-Pro-Text-Regular.otf")
     format("opentype");
+}
+
+
+@media (max-width:640px){
+  body{
+    font-size:6px;
+  }
+}
+
+@media (min-width:640px){
+  body{
+    font-size:8px;
+  }
+}
+
+@media (min-width:768px){
+  body{
+    font-size:9px;
+  }
+}
+
+@media (min-width:1024px){
+  body{
+    font-size:10px;
+  }
+}
+
+@media (min-width:1280px){
+  body{
+    font-size:14px;
+  }
+}
+
+@media (min-width:1536px){
+  body{
+    font-size:16px;
+  }
+}
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    color: transparent;
 }

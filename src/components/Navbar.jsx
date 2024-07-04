@@ -83,6 +83,7 @@ const StyledNav = styled.nav`
   align-items: center;
   position: sticky;
   top: 0;
+  z-index:10;
 
   @media (max-width: 768px) {
     justify-content: space-between;
@@ -92,11 +93,16 @@ const StyledNav = styled.nav`
 const StyledUL = styled.ul`
   display: flex;
   justify-content: space-around;
-  font-family: "SF Pro Display";
   text-align: center;
-  font-size: 1.6rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   list-style: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: "SF Pro Text", Arial, sans-serif;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
 
   & li a {
     color: var(--gray-color);
@@ -112,13 +118,12 @@ const StyledUL = styled.ul`
 
   @media (max-width: 768px) {
     position: absolute;
-    z-index: ${({ $active }) => ($active ? "100" : "-1")};
     flex-direction: column;
     justify-content: start;
     height: ${({ $active }) =>
       $active ? "92.7vh" : "0vh"};
     visibility: ${({ $active }) =>
-      $active ? "visible" : "hidden"};
+      $active ? "visible" : "hidden" };
     background-color: #000;
     top: 99%;
     left: 0%;
@@ -126,7 +131,13 @@ const StyledUL = styled.ul`
     align-items: start;
     padding-left: 20px;
     gap: 20px;
-    transition: all 0.5s ease-in-out;
+    transition: height 0.45s linear, visibility 0.35s ease-in-out;
+
+    font-size: 2.8rem;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: 0.007em;
+    font-family: "SF Pro Display", Arial, sans-serif;
   }
 `;
 
@@ -205,19 +216,19 @@ const Navbar = () => {
       <NavLinks>
         <StyledUL $active={isActive}>
           <li>
-            <a href="home">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="about">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="skill">Skill</a>
+            <a href="#skill">Skill</a>
           </li>
           <li>
-            <a href="projects">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="contact">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </StyledUL>
         <MenuIcon

@@ -1,8 +1,8 @@
-import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-
+import About from "./components/About";
+import Skill from './components/Skill'
 const App = () => {
   return (
     <div>
@@ -11,7 +11,9 @@ const App = () => {
       {/* {hero sections} */}
       <Hero />
       {/* about me  */}
+      <About />
       {/* skill sections */}
+      <Skill/>
       {/* projects */}
       {/* contact */}
       {/* footer */}
