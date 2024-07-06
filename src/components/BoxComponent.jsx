@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const BoxWrapper = styled.div`
   background-color: ${({ $backgroundColor }) =>
-    $backgroundColor};
+    $backgroundColor || "#000"};
   width: 100%;
   padding:20px;
   gap:${({$gap}) => `${$gap}px` || '0px'};
