@@ -14,6 +14,20 @@
   --black-color: #000;
 }
 
+ ::-moz-progress-bar{
+  background-color:var(--black-color);
+ }
+
+ ::-webkit-progress-value{
+  background-color:var(--black-color);
+ }
+
+ ::-webkit-progress-bar{
+border-radius:4px;
+  background-color: var(--gray-text-color);
+
+ }
+
 html{
    font-size: 62.5%;
 }

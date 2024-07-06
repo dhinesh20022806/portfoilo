@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const StyledProgress = styled.progress`
 width:100%;
-transition: all 0.5s ease-in-out;
+background-color:var(--gray-text-color);
+border-radius:4px;
 
 `;
 export default function ProgressBar({score}){
@@ -11,5 +12,5 @@ export default function ProgressBar({score}){
 
 
 
-	return (<progress value={score} max={100} ></progress>)
+	return (<StyledProgress value={score} max={100} ></StyledProgress>)
 }

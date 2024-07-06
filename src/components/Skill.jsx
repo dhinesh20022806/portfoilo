@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 import BoxWrapper from './BoxComponent'
 import Title from './Title';
-import ProgressBar from './ProgressBar'
+import SkillItem from './SkillItem';
 // mobile first apporch 
 
 const StyledSkill = styled.div`
+font-size:1.6rem;
 width:100vw;
  marign: 30px;
 height:content-fit;
@@ -14,24 +15,21 @@ padding: 30px;
   gap: 30px;
 display:flex;
 flex-direction:column;
+
+@media(min-width:1280px){
+	flex-direction:row;
+}
+
+
 `;
 
 const UnorderList = styled.ul`
 list-style:none;
-`
-const ListItem = styled.li`
 display:flex;
-gap:10px;
-align-items:center;
+flex-direction:column;
+gap:30px;
+`
 
-& div:first-child{
-	flex:.2;
-}
-
-& div:last-child{
-	flex:.8;
-}
-`;
 
 
 
@@ -40,25 +38,33 @@ export default function Skill(){
 
 
 	return (<StyledSkill>
-		<BoxWrapper $backgroundColor={"#f5f5f7"}>
+		<BoxWrapper $gap={30} $backgroundColor={"#f5f5f7"} $display={"flex"} $flexDirection={'column'} $justifyContent={"center"} $alignItems={'center'} >
 
 		<Title>Frontend Skill</Title>
 			
 		<UnorderList>
-			<ListItem>
-				
-				<div>HTML</div>
-				<div>
-				<h3>intermediate</h3>
-				<p>
-					<ProgressBar score={80}/>
-				</p>
-				</div>
-
-			</ListItem>
+		<SkillItem skill={'Html'} level="Advance" score={95} />
+		<SkillItem skill={'css'} level="intermedite" score={85} />
+		<SkillItem skill={'js'} level="intermedite" score={75} />
+		<SkillItem skill={'React'} level="intermedite" score={80} />
+			
 		</UnorderList>
 		</BoxWrapper>
-		<BoxWrapper $backgroundColor={"#000"}></BoxWrapper>
+		
+		<BoxWrapper $gap={30}   $backgroundColor={"#f5f5f7"} $display={"flex"} $flexDirection={'column'} $justifyContent={"center"} $alignItems={'center'} >
+
+		<Title>Backend Skill</Title>
+			
+		<UnorderList>
+		<SkillItem skill={'Node'} level="intermedite" score={65} />
+		<SkillItem skill={'Express'} level="intermedite" score={50} />
+		<SkillItem skill={'Postgres'} level="beginner" score={40} />
+		<SkillItem skill={'Python'} level="beginner" score={45} />
+			
+		</UnorderList>
+		</BoxWrapper>
+			
+
 			
 			
 
