@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import BoxWrapper from './BoxComponent'
 import Title from './Title';
+import ProgressBar from './ProgressBar'
 // mobile first apporch 
 
 const StyledSkill = styled.div`
@@ -23,7 +24,17 @@ display:flex;
 gap:10px;
 align-items:center;
 
-`
+& div:first-child{
+	flex:.2;
+}
+
+& div:last-child{
+	flex:.8;
+}
+`;
+
+
+
 import ProgresBar from './ProgressBar';
 export default function Skill(){
 
@@ -36,10 +47,12 @@ export default function Skill(){
 		<UnorderList>
 			<ListItem>
 				
-				<p>HTML</p>
+				<div>HTML</div>
 				<div>
 				<h3>intermediate</h3>
-				<p>progress here</p>
+				<p>
+					<ProgressBar score={80}/>
+				</p>
 				</div>
 
 			</ListItem>
